@@ -36,11 +36,11 @@ public class ProductoService implements IProductoService{
 
     @Override
     @Transactional
-    public Producto actualizarProducto(Long id, Producto requestDto) {
+    public Producto actualizarProducto(Long id, Producto producto) {
         Producto productoExistente = buscarProducto(id);
-        productoExistente.setNombre(requestDto.getNombre());
-        productoExistente.setPrecio(requestDto.getPrecio());
-        productoExistente.setStock(requestDto.getStock());
+        productoExistente.setNombre( producto.getNombre());
+        productoExistente.setPrecio( producto.getPrecio());
+        productoExistente.setStock(producto.getStock());
         return productoRepository.save(productoExistente);
     }
 
