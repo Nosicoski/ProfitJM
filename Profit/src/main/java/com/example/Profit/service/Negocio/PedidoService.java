@@ -1,4 +1,4 @@
-package com.example.Profit.service.impl;
+package com.example.Profit.service.Negocio;
 
 import com.example.Profit.Model.Pedido;
 import com.example.Profit.Exception.ResourceNotFoundException;
